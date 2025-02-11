@@ -1,0 +1,17 @@
+@import "../../styles/_colors.scss"; // assuming a styles directory under src/
+
+.footer-wrap {
+  background-color: $black;
+  width: 100%;
+  height: 127px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-wrap > p {
+  color: $yellow;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bolder;
+}

@@ -1,0 +1,22 @@
+@use "_colors.scss";
+@import "_colors.scss";
+
+html {
+  background-color: $black;
+}
+
+* {
+  margin: 0;
+  font-family: "Lato", serif;
+  font-weight: bold;
+  color: $white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.pageContent {
+  margin-top: 80px;
+  max-width: 100vw;
+  overflow: hidden;
+}

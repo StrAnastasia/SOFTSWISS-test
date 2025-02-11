@@ -1,0 +1,19 @@
+.cart-icon-with-hover {
+  width: 24px;
+  height: 20px;
+  .base-icon {
+    display: block;
+  }
+
+  .hover-icon {
+    display: none;
+  }
+}
+
+.cart-icon-with-hover:hover .base-icon {
+  display: none !important;
+}
+
+.cart-icon-with-hover:hover .hover-icon {
+  display: block !important;
+}

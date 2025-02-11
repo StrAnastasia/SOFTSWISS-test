@@ -1,0 +1,40 @@
+@import "/src/styles/index.scss";
+
+button {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 40px;
+  font-size: 22px;
+  line-height: 26px;
+  height: 54px;
+  padding: 14px 40px;
+  border: none;
+}
+
+.filled {
+  background-color: $yellow;
+  color: $black;
+}
+
+.filled:hover {
+  background-color: $yellow-opacity-60;
+}
+
+.outlined {
+  border: $yellow 2px solid;
+  background-color: transparent;
+  color: $yellow;
+}
+
+.outlined:hover {
+  border-color: $yellow-opacity-60;
+  color: $yellow-opacity-60;
+}
+
+.icon {
+  border: none;
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 4px;
+  height: max-content;
+}

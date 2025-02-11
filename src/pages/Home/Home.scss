@@ -1,0 +1,86 @@
+@import "/src/styles/colors";
+
+.homePage {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.firstScreen {
+  height: 490px;
+  background-image: linear-gradient(
+      -90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(15, 20, 32, 0.79) 100%
+    ),
+    url("../../shared/images/backgrounds/space_1.png");
+  background-size: 100% 100%, 100% auto;
+  background-position: bottom, bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.firstScreen .textAndImage {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstScreen .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstScreen h1 {
+  font-size: 72px;
+  line-height: 100%;
+  font-weight: bolder;
+}
+
+.firstScreen h2 {
+  font-size: 32px;
+  line-height: 120%;
+  font-weight: bolder;
+  margin: 22px 0;
+}
+
+.pinkText {
+  display: inline;
+  color: $pink;
+}
+
+.yellowText {
+  display: inline;
+  color: $yellow;
+}
+
+.offersBlock {
+  background-image: linear-gradient(25deg, #0d1e48 0%, #304571 100%);
+}
+
+.offersBlock .content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.offersBlock h2 {
+  font-size: 32px;
+}
+
+.offersBlock .articles {
+  margin: 40px 0 62px;
+}
+
+.offersBlock .content > p {
+  display: block;
+  font-size: 20px;
+  margin-top: 16px;
+  opacity: 60%;
+}
+
+.offersBlock .content .yellowText {
+  color: $yellow;
+  opacity: 100%;
+}
