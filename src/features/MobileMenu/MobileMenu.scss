@@ -1,0 +1,148 @@
+@import "../../styles/colors";
+
+.mobile-menu {
+  width: 36px;
+  height: 34px;
+}
+
+.mobile-menu__list {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  text-align: center;
+  background: rgb(0 0 0 / 40%);
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+  transition: all 0.375s;
+}
+
+.mobile-menu__list.is-open {
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+}
+
+/* Yellow band effect */
+.mobile-menu__list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -15px;
+  background: $black;
+  transform-origin: 0 0;
+  transform: skew(-14deg) translateX(-120%);
+  transition: all 0.275s 0.1s;
+}
+
+.mobile-menu__list.is-open::before {
+  transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.mobile-menu__list ul {
+  display: inline-flex;
+  flex-direction: column;
+  height: 90%;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateX(-18%) skew(-16deg);
+}
+
+.mobile-menu__list li {
+  display: block;
+  margin: 0.5rem 0;
+  text-align: right;
+  transform: skew(16deg);
+}
+
+.mobile-menu__list.is-open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-menu__list li:nth-child(1) a {
+  transition: all 275ms 200ms;
+}
+.mobile-menu__list li:nth-child(2) a {
+  transition: all 275ms 250ms;
+}
+
+/* Decoration */
+.mobile-menu__list ul,
+.mobile-menu__list li {
+  list-style: none;
+  padding: 0;
+}
+.mobile-menu__list a {
+  display: block;
+  padding: 12px 0;
+  color: $white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mobile-menu__button {
+  background: none;
+  cursor: pointer;
+  height: 34px;
+  display: flex;
+  align-items: end;
+}
+.mobile-menu__button:focus {
+  outline: none;
+}
+.mobile-menu__button__icon {
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: $white;
+  transition: all 0.275s;
+  margin-bottom: 3px;
+}
+
+.mobile-menu__button__icon:after,
+.mobile-menu__button__icon:before {
+  content: "";
+  display: block;
+  background: $white;
+  transition: all 0.275s;
+  height: 2px;
+  border-radius: 4px;
+  border: none;
+}
+
+.mobile-menu__button__icon:after {
+  transform: translateY(-10px);
+}
+
+.mobile-menu__button__icon:before {
+  transform: translateY(-16px);
+}
+
+/* Toggle State part */
+.is-open .mobile-menu__button__icon {
+  transform: skew(5deg) translateY(-8px) rotate(-40deg);
+}
+
+.is-open .mobile-menu__button__icon:before {
+  transform: translateY(1px) skew(-10deg) rotate(75deg);
+}
+
+.is-open .mobile-menu__button__icon:after {
+  transform: translateY(-12px) translateX(10px);
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}

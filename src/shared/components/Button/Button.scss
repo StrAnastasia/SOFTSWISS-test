@@ -2,13 +2,22 @@
 
 button {
   cursor: pointer;
-  padding: 4px;
   border-radius: 40px;
   font-size: 22px;
   line-height: 26px;
   height: 54px;
-  padding: 14px 40px;
+  padding: 0 40px;
   border: none;
+  width: max-content;
+  -webkit-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+  -webkit-transition: border-color 0.3s linear;
+  -ms-transition: border-color 0.3s linear;
+  transition: border-color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -ms-transition: color 0.3s linear;
+  transition: color 0.3s linear;
 }
 
 .filled {
@@ -37,4 +46,22 @@ button {
   padding: 4px;
   border-radius: 4px;
   height: max-content;
+}
+
+@media (max-width: 1248px) {
+  .outlined {
+    font-size: 16px;
+    line-height: 19px;
+    height: 33px;
+    padding: 0px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filled {
+    font-size: 16px;
+    line-height: 19px;
+    height: 33px;
+    padding: 0px 40px;
+  }
 }

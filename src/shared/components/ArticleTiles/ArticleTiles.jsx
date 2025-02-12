@@ -8,17 +8,18 @@ import backgroun4 from "../../images/backgrounds/space_5.png";
 const BACKGROUNDS = [backgroun1, backgroun2, backgroun3, backgroun4];
 
 const ArticleTiles = ({ articles }) => (
-  <div className="articlesWrapper">
+  <div className="articles__wrapper">
     {articles.map(({ title, description }, ind) => (
       <div
-        className="article"
+        key={title}
+        className="articles__element"
         style={{
           backgroundImage: `linear-gradient(-90deg,rgba(0, 0, 0, 0) 0%,rgba(15, 20, 32, 0.79) 100%), url(${BACKGROUNDS[ind]})`,
         }}
       >
-        <div className="articleContent">
-          <h3>{title}</h3>
-          <p>{description}</p>
+        <div>
+          <h4 dangerouslySetInnerHTML={{ __html: title }} />
+          <p dangerouslySetInnerHTML={{ __html: description }} />
           <Button variant="outlined">Learn more</Button>
         </div>
       </div>

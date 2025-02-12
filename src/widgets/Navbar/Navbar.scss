@@ -1,38 +1,55 @@
 @import "../../styles/_colors.scss"; // assuming a styles directory under src/
 
-.navbar-wrap {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar__wrapper {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 80px;
-  padding: 0 80px;
+  width: 100%;
+  z-index: 200;
   background: $black;
   color: $white;
 }
 
-.right-half {
+.navbar__wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.navbar__links {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 55px;
 }
 
-.right-half a {
+.navbar__links a {
   text-decoration: none;
   font-size: 18px;
 }
 
-.right-half a:hover {
-  background-image: linear-gradient(120deg,$yellow, $pink);
+.navbar__links a:hover {
+  background-image: linear-gradient(120deg, $yellow, $pink);
   color: transparent;
   background-clip: text;
 }
 
-.right-half a:active {
+.navbar__links a:active {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar__wrapper > div {
+    height: 48px;
+  }
+
+  .navbar__wrapper .page__content_margined-section > a > svg {
+    height: 24px;
+    width: max-content;
+  }
+
+  .navbar__links {
+    display: none;
+  }
 }
