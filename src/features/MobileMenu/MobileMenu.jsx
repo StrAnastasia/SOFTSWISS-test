@@ -15,7 +15,7 @@ const MobileMenu = ({ links }) => {
       >
         <span className="mobile-menu__button__icon"></span>
       </Button>
-      <nav className={`mobile-menu__list ${isOpen && "isOpen"}`}>
+      <nav className={`mobile-menu__list ${isOpen && "is-open"}`}>
         <ul>
           {links.map((title) => (
             <li>
