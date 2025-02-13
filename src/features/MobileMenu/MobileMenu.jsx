@@ -11,14 +11,14 @@ const MobileMenu = ({ links }) => {
       <Button
         onClick={changeIsOpen}
         variant="icon"
-        className={`mobile-menu__button ${isOpen ? "is-open" : ''}`}
+        className={`mobile-menu__button ${isOpen ? "is-open" : ""}`}
       >
         <span className="mobile-menu__button__icon"></span>
       </Button>
-      <nav className={`mobile-menu__list ${isOpen && "is-open"}`}>
+      <nav className={`mobile-menu__list ${isOpen ? "is-open" : ""}`}>
         <ul>
           {links.map((title) => (
-            <li>
+            <li key={title}>
               <Link>{title}</Link>
             </li>
           ))}

@@ -47,7 +47,7 @@ const Home = () => (
           <ArticleTiles articles={OFFERS} />
         </div>
         <h3>Embark on a space journey</h3>
-        <input type="checkbox" class="home-page__offers-block_content_read-more_state" id="changeVisibleText" />
+        <input type="checkbox" className="home-page__offers-block_content_read-more_state" id="changeVisibleText" />
         <div className="home-page__offers-block_content_read-more_wrapper">
           <p className="home-page__offers-block_content_read-more_base-text">
             Travelling into space is one of the most exciting and unforgettable
@@ -66,7 +66,7 @@ const Home = () => (
             adipisicing elit.
           </p>
         </div>
-        <label for="changeVisibleText" class="home-page__offers-block_content_read-more_button"></label>
+        <label htmlFor="changeVisibleText" className="home-page__offers-block_content_read-more_button"></label>
       </div>
     </div>
   </div>
